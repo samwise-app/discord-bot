@@ -1,4 +1,3 @@
-import { Client } from 'discord.js';
 import { serverName } from '../lib/constants';
 import { supabase } from '../lib/db';
 import { Data } from '../types/data';

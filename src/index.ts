@@ -7,7 +7,6 @@ import { parseSentMessage } from './helpers/dataParser';
 import { channelReducer } from './helpers/channelReducer';
 import { ActionType } from './types/data';
 
-
 client.once(Events.ClientReady, (c: any) => {
   console.log(`Ready! Logged in as ${c.user.tag}!`);
 });

@@ -33,6 +33,7 @@ export const channelReducer = (action: ActionType, data: Data) => {
       saveToDatabase(data);
       return;
     default:
+      saveToDatabase(data);
       break;
   }
 };
