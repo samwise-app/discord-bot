@@ -10,6 +10,7 @@ export const saveToDatabase = async (data: Data) => {
       message_created_at: data.createdAt,
       sender: data.sender,
       channel_name: data.channelName,
+      thread_details: data.threadDetails,
       message: data.message,
       images: data.images,
     },
