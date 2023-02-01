@@ -15,5 +15,10 @@ export const saveToDatabase = async (data: Data) => {
       images: data.images,
     },
   ]);
-  if (error) catchError(error.message, data);
+  if (error)
+    catchError(error.message, {
+      sender: data.sender,
+      message: data.message,
+      channel: data.channelName,
+    });
 };

@@ -15,6 +15,11 @@ export const supabaseKey = process.env.SUPABASE_KEY || '';
 export const dRealName = process.env.D_REAL_NAME || '';
 export const dUserName = process.env.D_USER_NAME || '';
 export const serverName = process.env.SERVER_NAME || '';
+export const adminID = dID;
+export const radarrUrl = process.env.RADARR_URL || '';
+export const radarrApiKey = process.env.RADARR_API_KEY || '';
+export const sonarrUrl = process.env.SONARR_URL || '';
+export const sonarrApiKey = process.env.SONARR_API_KEY || '';
 
 type ChannelMapType = {
   [key: string]: string;

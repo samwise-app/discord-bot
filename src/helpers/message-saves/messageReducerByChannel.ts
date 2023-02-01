@@ -1,3 +1,4 @@
+// Organizes messages by channel to be handled differently if needed.
 import {
   BotChatChannelId,
   BotTestChannelId,
@@ -7,9 +8,9 @@ import {
   HouseHuntingChannelId,
   KidStoriesChannelId,
   ShoppingListChannelId,
-} from '../lib/constants';
-import { ActionType, Data } from '../types/data';
-import { saveToDatabase } from './dbHandlers';
+} from '../../lib/constants';
+import { ActionType, Data } from '../../types/data';
+import { saveToDatabase } from '../dbHandlers';
 
 export const channelReducer = (action: ActionType, data: Data) => {
   switch (data.channelName) {

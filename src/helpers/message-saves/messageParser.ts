@@ -1,6 +1,6 @@
 import { Message } from 'discord.js';
-import { channelIdsMap, dRealName, dUserName } from '../lib/constants';
-import { Data, ThreadDetails } from '../types/data';
+import { channelIdsMap, dRealName, dUserName } from '../../lib/constants';
+import { Data, ThreadDetails } from '../../types/data';
 import { convertImageToBase64 } from './convertImage';
 
 export const parseSentMessage = async (message: Message): Promise<Data> => {
