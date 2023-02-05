@@ -7,10 +7,11 @@ import {
 import { MediaArray } from '../types/data';
 import { getMoviesFromString } from '../api/radarr';
 import { getShowsFromString } from '../api/sonarr';
+import { nodeEnvironment } from '../lib/constants';
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('request')
+    .setName(nodeEnvironment === 'dev' ? 'dev-request' : 'request')
     .setDescription('Requests media to be added to the library.')
     .addStringOption((option) =>
       option

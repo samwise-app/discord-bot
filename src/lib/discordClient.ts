@@ -1,4 +1,5 @@
 import { Client, Collection, GatewayIntentBits } from 'discord.js';
+import { nodeEnvironment } from './constants';
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -21,7 +22,9 @@ client.commands = new Collection();
 const commandsPath = path.join(__dirname, '../commands');
 const commandFiles = fs
   .readdirSync(commandsPath)
-  .filter((file: string) => file.endsWith('.ts'));
+  .filter((file: string) =>
+    file.endsWith(nodeEnvironment === 'dev' ? '.ts' : '.js')
+  );
 
 for (const file of commandFiles) {
   const filePath = path.join(commandsPath, file);

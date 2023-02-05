@@ -20,6 +20,7 @@ export const radarrUrl = process.env.RADARR_URL || '';
 export const radarrApiKey = process.env.RADARR_API_KEY || '';
 export const sonarrUrl = process.env.SONARR_URL || '';
 export const sonarrApiKey = process.env.SONARR_API_KEY || '';
+export const nodeEnvironment = process.env.NODE_ENV || '';
 
 type ChannelMapType = {
   [key: string]: string;
